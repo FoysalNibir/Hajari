@@ -1,0 +1,103 @@
+.brown{color:#9b846b}
+.logo-img {
+  position:absolute;
+  height: 70%;
+  width: 3%;
+  left:5%;
+  top:27%;
+  margin: 0 auto;
+}
+.card-img {
+  height: 25%;
+  width: 20%;
+}
+
+.rounded-list ol{
+  counter-reset:li; /* Initiate a counter */
+  margin-left:0; /* Remove the default left margin */
+  padding-left:0; /* Remove the default left padding */
+}
+
+/* item  */
+.rounded-list ol > li{
+  position:relative; /* Create a positioning context */
+  list-style:none; /* Disable the normal item numbering */
+  background:#f6f6f6; /* Item background color */
+  margin:0; /* Give each list item a left margin to make room for the numbers */
+  padding-left: 15px; /* Add some spacing around the content */
+  padding-bottom:0px;
+  padding-top:0px;
+}
+
+/* number  */
+.rounded-list ol > li p:before{
+  content: counter(li); 
+  counter-increment: li;
+  color: white; 
+  position: absolute; 
+  left: -1.3em;
+  top: 50%;
+
+  /* number background */
+  background: #3C8DBC; 
+  height: 2em;
+  width: 2em;
+  margin-top: -1em;
+  line-height: 1.5em;
+  border: .3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+}
+.big-icon {
+  font-size: 32px;
+}
+.visible{
+  display: block;
+}
+.mobile{
+  display: none;
+}
+
+@media  screen and (max-width: 1920px) and (min-width: 1910px) {
+  .card-img {
+    height: 35%;
+    width: 20%;
+  }
+  .logo-img {
+    position:absolute;
+    height: 70%;
+    width: 2%;
+    left:5%;
+    top:27%;
+    margin: 0 auto;
+  }
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -270px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card-img{
+    height: 22%;
+    width: 30%;
+  }
+  .logo-img{
+    position:absolute;
+    height: 70%;
+    width: 11%;
+    left:5%;
+    top:27%;
+    margin: 0 auto;
+    display: block;
+  }
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 40px !important;
+  }  
+  .visible {
+    display: none !important;
+  }
+  .mobile{
+    display: block;
+  }
+}
